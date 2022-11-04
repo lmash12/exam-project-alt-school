@@ -1,0 +1,256 @@
+.main {
+  width: 100%;
+}
+/*home*/
+.home-h1 {
+  height: 100px;
+}
+
+.single-repo {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  width: 375px;
+  height: 150px;
+  word-wrap: break-word;
+  background-color: rgb(253, 249, 249);
+  border-radius: 2px;
+  border: 1px solid gray;
+}
+
+.details {
+  position: static;
+  top: 59%;
+  margin-left: 27px;
+}
+
+.single-repo dl {
+  padding-left: 30px;
+}
+/*navbar*/
+.ul-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 120px;
+}
+
+.ul-list li {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  font-size: 30px;
+}
+
+.single {
+  display: inline-flex;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 100%;
+  color: black;
+}
+
+.single li {
+  list-style-type: none;
+  font-size: 15px;
+}
+
+.showone {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 375px;
+  height: 150px;
+  background-color: rgb(253, 249, 249);
+  border: 1px solid gray;
+  border-radius: 2px;
+  word-wrap: break-word;
+  margin: 40px auto;
+  font-size: 20px;
+}
+
+/*contact section*/
+.contact-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 100px auto;
+}
+
+.contact-list li {
+  margin: 50px auto;
+  list-style-type: none;
+}
+
+.contact-list a {
+  margin: 50px auto;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+/*Footer page*/
+.footer {
+  background-color: rgb(45, 44, 44);
+  color: #fdf208;
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.footer-list li {
+  margin: 20px auto;
+  list-style-type: none;
+}
+
+.footer-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.footer-list a {
+  text-decoration: none;
+  color: #fdf208;
+}
+
+/*Error page styling done mostly inline*/
+
+.error-page {
+  height: 300px;
+  width: 100%;
+}
+
+span {
+  color: red;
+}
+
+/*navbar styling*/
+.navBar {
+  background-color: black;
+}
+@media only screen and (max-width: 400px) {
+  .ul-list li {
+    display: inline-flex;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .navBar {
+    height: 100px;
+  }
+
+  .home-h1 {
+    margin-top: 30px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .home-p {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+
+  .home-pic {
+    margin-top: 70px;
+  }
+
+  .home-img {
+    margin-top: 40px;
+    height: 400px;
+    width: 100%;
+  }
+
+  .footer {
+    width: 100%;
+    font-size: 14px;
+    background-color: black;
+    text-align: center;
+    align-items: center;
+    height: 150px;
+  }
+
+  .footer-list li {
+    margin: 20px auto;
+    list-style-type: none;
+    text-align: center;
+  }
+
+  .single-repo {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    width: 350px;
+    height: 150px;
+    font-size: 15px;
+    word-wrap: break-word;
+    word-break: break-all;
+    background-color: rgb(253, 249, 249);
+    border-radius: 2px;
+    border: 1px solid gray;
+  }
+
+  .main h1 {
+    font-size: 18px;
+  }
+
+  .details {
+    position: static;
+    margin: auto;
+  }
+
+  .about-para {
+    font-size: 10px;
+    height: 550px;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    overflow-y: hidden;
+  }
+  .contact-page h1 {
+    margin-top: 30px;
+    font-size: 22px;
+  }
+  .contact-page {
+    height: 580px;
+  }
+  .contact-page h2 {
+    margin-top: 60px;
+    font-size: 25px;
+  }
+  .contact-list {
+    height: 140px;
+  }
+  .nav-list {
+    margin: 20px auto;
+  }
+  .contact-list a {
+    margin: 10px auto;
+    font-size: 20px;
+  }
+  .contact-list li {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+  .single {
+    width: 350px;
+    height: 580px;
+  }
+  .showone {
+    margin-top: 150px;
+    padding: 10px;
+    margin-left: 40px;
+    height: 200px;
+    width: 350px;
+    font-size: 25px;
+  }
+  .showone li a {
+    margin-top: 100px;
+  }
+
+  .error-page {
+    height: 380px;
+  }
+
+  .message {
+    margin-top: 200px;
+  }
+}
