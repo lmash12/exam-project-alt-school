@@ -6,20 +6,37 @@ import {
   FaWhatsapp,
   FaPhoneAlt,
 } from "react-icons/fa";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_nqfu6vj', 'template_6xe37aq', form.current, 'nMAEWyJ8xHsmgeh0P')
+      .then((result) => {
+          console.log(result.text);
+          alert("message sent")
+          e.target.reset();
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   return (
     <div className="contact-page">
-      <h1 style={{ textAlign: "center", color: "gray", marginTop: "20px"}}>Let's Talk</h1>
-      <h3 style={{ textAlign: "center", marginTop: "20px" }}>
-        <a aria-label="GitHub link to a profile"
-          href="https://github.com/lmash12"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Lesley Mashaya
-        </a>
-      </h3>
+      <h1 style={{ textAlign: "center", color: "gray", marginTop: "20px"}}>Let's Chat</h1>
+      
+      <form ref={form} onSubmit={sendEmail}>
+      <label>Name</label>
+      <input type="text" name="user_name" />
+      <label>Email</label>
+      <input type="email" name="user_email" />
+      <label>Message</label>
+      <textarea name="message" />
+      <input type="submit" value="Send" />
+    </form>
       <ul className="contact-list">
         <li>
           <h4>
@@ -75,7 +92,7 @@ const Contact = () => {
         <li>
           <h4>
             <a aria-label="Profile description with a coding sign" href="#">
-              I am a ReactJs FrontEnd Dev <FaCode color="#FD0B1B" />
+              FrontEnd Developer <FaCode color="#FD0B1B" />
             </a>
           </h4>
         </li>

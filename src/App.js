@@ -9,22 +9,15 @@ import SingleRepo from "./components/SingleRepo";
 import About from "./components/About";
 import FetchMyPage from "./components/FetchMyPage";
 import Contact from "./components/Contact";
+import ErrorFallBack from "./components/ErrorFallBack";
 
-function ErrorFallBack({ error }) {
-  return (
-    <div role="alert">
-      <p>
-        <h1>Something went wrong</h1>
-      </p>
-      <pre style={{ color: "blue" }}>{error.message}</pre>
-    </div>
-  );
-}
+
+
 
 function App() {
   return (
     <div className="app">
-      <ErrorBoundary FallbackComponent={ErrorFallBack}>
+      <ErrorBoundary FallbackComponent={<ErrorFallBack/>}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />

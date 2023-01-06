@@ -9,27 +9,27 @@ const Navbar = () => {
           <li>
             <NavLink aria-label="Home page"
               style={({ isActive }) =>
-                isActive ? { color: "red" } : { color: "#FDF208" }
+                isActive ? { color: "rgb(249, 105, 14)" } : { color: "#FDF208" }
               }
               to="/"
             >
-              Home
+              Lesley
             </NavLink>
           </li>
           <li>
             <NavLink aria-label="Repositories"
               style={({ isActive }) =>
-                isActive ? { color: "red" } : { color: "#FDF208" }
+                isActive ? { color: "rgb(249, 105, 14)" } : { color: "#FDF208" }
               }
               to="/repositories"
             >
-              Repositories
+              Repos
             </NavLink>
           </li>
           <li>
             <NavLink aria-label="About Section"
               style={({ isActive }) =>
-                isActive ? { color: "red" } : { color: "#FDF208" }
+                isActive ? { color: "rgb(249, 105, 14)" } : { color: "#FDF208" }
               }
               to="/about"
             >
@@ -39,7 +39,7 @@ const Navbar = () => {
           <li>
             <NavLink aria-label="Contact Section"
               style={({ isActive }) =>
-                isActive ? { color: "red" } : { color: "#FDF208" }
+                isActive ? { color: "rgb(249, 105, 14)" } : { color: "#FDF208" }
               }
               to="/contact"
             >

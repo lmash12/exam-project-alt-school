@@ -3,6 +3,7 @@ import ReactPaginate from "react-paginate";
 import { Link } from "react-router-dom";
 
 const FetchMyPage = () => {
+  
   const [repo, setRepo] = useState([]);
   const [pageNum, setPageNum] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -15,34 +16,31 @@ const FetchMyPage = () => {
     .slice(pagesVisited, pagesVisited + reposPerPage)
     .map((repo) => {
       return (
+        <Link to={`/repositories/${repo.id}`}>
         <div key={repo.id} className="single-repo">
-          <div className="repo-body">
+          <div className="repo-body" >
             <dl>
               <dt>
-                <a href={repo.html_url}>{repo.name}</a>
+                {repo.name}
               </dt>
               <dd>{repo.description}</dd>
               <dd>{repo.created_at}</dd>
               <dt>{repo.language}</dt>
             </dl>
           </div>
-          <Link
-            className="details"
-            to={`/repositories/
-       Name:${repo.name} Description:${repo.description} Created:${repo.created_at} Lang:${repo.language}
-      `}
-          >
-            Details
-          </Link>
         </div>
+        </Link>
       );
     });
+    
   /*this function handles the page incase we have an uneven number of repos */
   const pageCount = Math.ceil(repo.length / reposPerPage);
   /*handle click function for pagination */
   const handlePageClick = ({ selected }) => {
     setPageNum(selected);
   };
+  
+  
 
   useEffect(() => {
     setLoading(true);
@@ -52,7 +50,7 @@ const FetchMyPage = () => {
         .then((data) => setRepo(data));
       setLoading(false);
     } catch (error) {
-      console.log(error);
+      //console.log(error);
     }
   }, []);
 
@@ -60,9 +58,7 @@ const FetchMyPage = () => {
     <h1>Loading...</h1>
   ) : (
     <main className="main">
-      <h1 style={{ textAlign: "center", color: "cornflowerblue" }}>
-        Lesley's GitHub Repos
-      </h1>
+      
       {displayRepos}
       <nav aria-label="Repository results pages">
         <ReactPaginate
@@ -84,6 +80,7 @@ const FetchMyPage = () => {
           activeClassName={"active"}
         />
       </nav>
+
     </main>
   );
 };

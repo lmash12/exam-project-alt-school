@@ -14,6 +14,9 @@ const Footer = () => {
         <li>
           <Link to="/about">Advertise</Link>
         </li>
+        <li>
+          <Link style={{color: "red"}} to="/error">Error Boundary</Link>
+        </li>
       </ul>
     </div>
   );
