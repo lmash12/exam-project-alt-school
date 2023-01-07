@@ -75,14 +75,21 @@ input[type="submit"] {
   margin-top: 60px;
   position: absolute;
   left: 90%;
-  color: blue;
+  color:  rgb(249, 105, 14);
   font-weight: 600;
   text-decoration: none;
 }
 
 .article a:hover{
-  text-decoration: underline;
-  color: rgb(249, 105, 14);
+  z-index: 1;
+  transition: ease-in-out 450ms;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: rgb(249, 105, 14);
+  color:  rgb(249, 105, 14);
+  text-align: center;
+  align-items: center;
 }
 
 input{
@@ -226,10 +233,7 @@ span {
   color: red;
 }
 
-/* outlet styling */
-.outlet{
-  height: 630px;
-}
+
 
 /*navbar styling*/
 
@@ -254,9 +258,7 @@ span {
     height: 667px;
     width: 375px;
   }
-  .navBar {
-    margin: 0 auto;
-  }
+ 
   .ul-list li {
     display: inline-flex;
     font-size: 20px;
@@ -279,8 +281,7 @@ span {
 .article{
   margin-top: -20px;
   font-size: 16px;
-  text-align: center;
-  align-items: center;
+ 
 }
 
 
@@ -293,16 +294,15 @@ span {
 
   .footer {
     width: 100%;
-    font-size: 14px;
+    font-size: 10px;
     background-color: black;
     text-align: center;
     align-items: center;
-    height: 150px;
-    margin-bottom: 0px;
+    height: 80px;
   }
 
   .footer-list li {
-    margin: 20px auto;
+    margin: 0px auto;
     list-style-type: none;
     text-align: center;
   }
@@ -334,7 +334,7 @@ span {
     height: 140px;
   }
   .nav-list {
-    margin: 20px auto;
+    margin: 0px auto;
   }
   .contact-list a {
     margin: 10px auto;
